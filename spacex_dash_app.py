@@ -70,7 +70,7 @@ def get_pie_chart(entered_site):
         failure_ct = filtered_df[filtered_df['class'] == 0]['Launch Site'].count()
         success_ct = filtered_df[filtered_df['class'] == 1]['Launch Site'].count()
         fig = px.pie(filtered_df,
-        values=[failure_ctsuccess_ct, ], 
+        values=[failure_ct, success_ct], 
         names=['Failure', 'Success'], 
         title='Success rate for '+entered_site)
         return fig
